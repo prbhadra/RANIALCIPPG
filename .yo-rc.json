@@ -1,0 +1,49 @@
+{
+  "generator-jhipster": {
+    "applicationType": "uaa",
+    "gitCompany": "",
+    "baseName": "RANIALCIPPG",
+    "packageName": "com.ranial.cip",
+    "packageFolder": "com/ranial/cip",
+    "serverPort": 9999,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "infinispan",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": "true",
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "nl",
+      "en",
+      "fr",
+      "de",
+      "ja",
+      "es"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.0.1",
+    "jwtSecretKey": "NzZkNTY3NzkzZDAzN2FmZTJhZjYzOWNlZDAxNTY4MTFkMDhmODc4MTliNzgzYTQwOTFiNDY2NmRlYjY2MDg0NjQxMjczM2IzZWU3ODM5Y2Y0NGNjYzUyOTFiZTM2NDJmYjUxMmRkM2I1ZDE0ODdhZGVmYjA0NzI5MjM3MjJkZGQ=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "prbhadra",
+  "repository-name": "RANIALCIPPG"
+}

@@ -1,0 +1,11 @@
+version: '2'
+services:
+  ranialcippg-postgresql:
+    image: postgres:11.2
+    # volumes:
+    #     - ~/volumes/jhipster/RANIALCIPPG/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=RANIALCIPPG
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
