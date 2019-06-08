@@ -1,0 +1,93 @@
+{
+    "name": "DomainAttributes",
+    "fields": [
+        {
+            "fieldName": "attributeName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "attributeType",
+            "fieldType": "DATATYPE",
+            "fieldValues": "ASCII,BIGINT,BLOB,BOOLEAN,COUNTER,DECIMAL,DOUBLE,FLOAT,INET,INT,TEXT,TIMESTAMP,TIMEUUID,UUID,VARCHAR,VARINT,LIST,MAP,SET",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "attributeLength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "attributeDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "allowNull",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isPrimary",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isUnique",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isIndexed",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isForaignKey",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "domain",
+            "otherEntityRelationshipName": "domainAttributes",
+            "relationshipName": "entityName"
+        },
+        {
+            "relationshipName": "domainRelationship",
+            "otherEntityName": "domainRelationship",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "domainRelationship",
+            "otherEntityName": "domainRelationship",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190608173313",
+    "entityTableName": "domain_attributes",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "Rcip"
+}

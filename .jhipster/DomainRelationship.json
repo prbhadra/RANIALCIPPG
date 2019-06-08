@@ -1,0 +1,34 @@
+{
+    "name": "DomainRelationship",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "domain",
+            "otherEntityRelationshipName": "domainRelationship",
+            "relationshipName": "parentKeyEntityName"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "domainAttributes",
+            "otherEntityRelationshipName": "domainRelationship",
+            "relationshipName": "parentKeyAttributeName"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "domainAttributes",
+            "otherEntityRelationshipName": "domainRelationship",
+            "relationshipName": "chieldAttributeName"
+        }
+    ],
+    "changelogDate": "20190608173314",
+    "entityTableName": "domain_relationship",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "Rcip"
+}

@@ -194,6 +194,27 @@ public class CacheConfiguration {
             registerPredefinedCache(com.ranial.cip.domain.User.class.getName() + ".authorities", new JCache<Object, Object>(
                 cacheManager.getCache(com.ranial.cip.domain.User.class.getName() + ".authorities").getAdvancedCache(), this,
                 ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.Domain.class.getName(), new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.Domain.class.getName()).getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainAttributes.class.getName(), new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainAttributes.class.getName()).getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainAttributes.class.getName() + ".entityNames", new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainAttributes.class.getName() + ".entityNames").getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainRelationship.class.getName(), new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainRelationship.class.getName()).getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".parentKeyEntityNames", new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".parentKeyEntityNames").getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".parentKeyAttributeNames", new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".parentKeyAttributeNames").getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
+            registerPredefinedCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".chieldAttributeNames", new JCache<Object, Object>(
+                cacheManager.getCache(com.ranial.cip.domain.DomainRelationship.class.getName() + ".chieldAttributeNames").getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
             // jhipster-needle-infinispan-add-entry
             if (jHipsterProperties.getCache().getInfinispan().isStatsEnabled()) {
                 for (String cacheName : cacheManager.getCacheNames()) {

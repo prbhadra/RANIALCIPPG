@@ -1,0 +1,54 @@
+entity Domain {
+	entityName String required,
+	entityDescription String, 
+	owner String,
+	createdOn Instant,
+	isActive Boolean
+}
+
+entity DomainAttributes {
+	
+	attributeName String required,
+	attributeType DATATYPE required,
+	attributeLength Integer,
+	attributeDescription String,
+	allowNull Boolean required,
+	isPrimary Boolean required,
+	isUnique  Boolean required,
+	isIndexed Boolean required,
+	isForaignKey Boolean required
+	
+}
+
+entity DomainRelationship {
+	
+	}
+
+enum DATATYPE {
+ASCII, BIGINT, BLOB, BOOLEAN, COUNTER, DECIMAL, DOUBLE, FLOAT, INET, INT, TEXT, TIMESTAMP, TIMEUUID, UUID, VARCHAR, VARINT, LIST, MAP, SET
+
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	DomainAttributes{entityName} to Domain,
+	DomainRelationship{parentKeyEntityName} to Domain,
+	DomainRelationship{parentKeyAttributeName} to DomainAttributes
+	DomainRelationship{chieldAttributeName} to DomainAttributes
+}
+
+
+
+
+// Set pagination options
+paginate DomainAttributes with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+angularSuffix * with Rcip
